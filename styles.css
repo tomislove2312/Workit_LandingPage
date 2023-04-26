@@ -1,0 +1,17 @@
+:root {
+  --dark-blue: #24053e;
+  --green: #44ffa1;
+  --dark-grey: #584d62;
+  --light-grey: #fcf8ff;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
