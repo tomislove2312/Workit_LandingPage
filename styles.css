@@ -1,8 +1,23 @@
 :root {
-  --dark-blue: #24053e;
+  --dark-purple: #24053e;
   --green: #44ffa1;
   --dark-grey: #584d62;
   --light-grey: #fcf8ff;
+
+  --font-family-default: "Manrope", sans-serif;
+  --font-family-heading: "Fraunces", sans-serif;
+
+  --fw-regular: 400;
+
+  --fw-bold: 600;
+  --fw-bolder: 700;
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.5rem;
 }
 
 @font-face {
@@ -14,4 +29,354 @@
   font-family: "Manrope";
   src: url("/assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
     format("truetype");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font: inherit;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+}
+.small_spring {
+  display: none;
+}
+.big_spring {
+  display: none;
+}
+.footer_spring {
+  display: none;
+}
+
+.purple_box_ellipse {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 370px;
+  background-color: var(--dark-purple);
+  clip-path: ellipse(80% 15%);
+}
+
+.purple_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 400px;
+  background-color: var(--dark-purple);
+}
+.grey_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -101;
+  width: 100%;
+  height: 1300px;
+  background-color: var(--light-grey);
+}
+.grey_box_ellipse {
+  position: absolute;
+  top: 1150px;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 370px;
+  background-color: var(--light-grey);
+  clip-path: ellipse(80% 15%);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 16px 0 16px;
+}
+.apply {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  line-height: 32px;
+  border-bottom: 3px solid var(--green);
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  margin-top: 50px;
+}
+.hero h1 {
+  font-family: var(--font-family-heading);
+  color: white;
+  font-size: var(--fs-900);
+  text-align: center;
+  max-width: 300px;
+}
+.hero span {
+  border-bottom: 3px solid var(--green);
+}
+.hero button {
+  width: 133px;
+  height: 55px;
+  font-family: var(--font-family-default);
+  color: var(--dark-purple);
+  background-color: var(--green);
+  border: none;
+  font-weight: 700;
+  margin-top: 39px;
+}
+.hero img {
+  width: 320px;
+  margin-top: 75px;
+}
+.three_reasons {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.number_reason {
+  display: grid;
+  place-content: center;
+  border: 1px solid black;
+  width: 48px;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: var (--font-family-heading);
+  margin-top: 2.5rem;
+}
+.reason_text h3 {
+  font-family: var (--font-family-heading);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+.reason_text p {
+  font-family: var (--font-family-default);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+.reason {
+  display: grid;
+  justify-items: center;
+  margin-top: px;
+}
+.reason_text {
+  text-align: center;
+  margin-top: 24px;
+}
+.reason_text p {
+  margin-top: 16px;
+}
+.founder {
+  position: relative;
+}
+.founder_img {
+  position: absolute;
+  width: 281px;
+  z-index: -3;
+  top: -230px;
+  left: 15%;
+}
+.founder_msg {
+  color: white;
+  min-width: 343px;
+  height: 375px;
+
+  background-color: var(--dark-purple);
+  text-align: center;
+  line-height: 32px;
+  padding: 2rem 1.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 400px;
+}
+.founder_msg h2 {
+  font-family: var(--font-family-heading);
+  padding-bottom: 1.5rem;
+  font-size: 32px;
+}
+.founder_msg p {
+  font-family: var(--font-family-default);
+  padding-bottom: 1.1rem;
+  font-size: 16px;
+}
+.founder_msg button {
+  width: 175px;
+  height: 55px;
+  background-color: var(--green);
+  border: none;
+  font-family: var(--font-family-default);
+  font-weight: 600;
+}
+
+.footer_img {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media only screen and (min-width: 600px) {
+  .purple_box_ellipse {
+    clip-path: ellipse(80% 30%);
+  }
+  .grey_box {
+    height: 1200px;
+  }
+  .grey_box_ellipse {
+    clip-path: ellipse(80% 30%);
+    top: 1000px;
+  }
+  .hero img {
+    width: 479px;
+  }
+  .header {
+    padding: 32px 39px 0 39px;
+  }
+  .small_spring {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: -100px;
+  }
+  .big_spring {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: -225px;
+  }
+  .reason {
+    grid-template-columns: 25% 75%;
+    padding-left: 40px;
+    padding-right: 80px;
+  }
+  .number_reason {
+    align-self: center;
+  }
+
+  .reason_text {
+    text-align: left;
+  }
+  .reason_text:nth-child(2) {
+    margin-top: 3rem;
+  }
+  .three_reasons {
+    margin-top: 2rem;
+  }
+  .founder_msg {
+    width: 514px;
+    height: 375px;
+    text-align: left;
+    margin-left: 14rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 350px;
+  }
+  .founder_msg h2 {
+    padding-top: 1.8rem;
+  }
+  .founder_msg p {
+    padding-bottom: 2.5rem;
+  }
+  .founder_img {
+    top: -150px;
+    left: 50px;
+  }
+  .footer_spring {
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    right: 40px;
+  }
+  .footer_img {
+    margin-top: 5rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .purple_box_ellipse {
+    clip-path: ellipse(80% 50%);
+  }
+  .grey_box_ellipse {
+    clip-path: ellipse(80% 30%);
+  }
+  .hero img {
+    width: 767px;
+  }
+  .header {
+    padding: 32px 165px 0 165px;
+  }
+  .small_spring {
+    right: -70px;
+  }
+  .big_spring {
+    left: -155px;
+  }
+  .three_reasons {
+    display: flex;
+    padding: 0 4rem;
+  }
+  .reason {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reason_text {
+    max-width: 354px;
+
+    text-align: center;
+  }
+  .founder_msg {
+    width: 730px;
+    height: 413px;
+    text-align: left;
+    margin-left: 14rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 350px;
+  }
+  .founder_msg h2 {
+    font-size: 56px;
+    padding-bottom: 3rem;
+  }
+  .founder_msg p {
+    font-size: 18px;
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .founder_msg {
+    margin-left: 32rem;
+  }
+  .founder_img {
+    width: 477px;
+    top: -150px;
+    left: 130px;
+  }
+  .footer_spring {
+    bottom: -100px;
+    right: 280px;
+  }
+  .footer_img {
+    margin-top: 8rem;
+  }
 }
